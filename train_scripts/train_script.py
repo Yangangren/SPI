@@ -47,10 +47,10 @@ def set_seed(seed):
 
 def built_NADP_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--noise_mode', type=str, default='adv_noise')  # adv_noise rand_noise no_noise adv_noise_smooth
+    parser.add_argument('--noise_mode', type=str, default='adv_noise')  # adv_noise no_noise adv_noise_smooth
     parser.add_argument('--mode', type=str, default='training') # training testing
     mode, noise_mode = parser.parse_args().mode, parser.parse_args().noise_mode
-    parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--seed', type=int, default=2)
     parser.add_argument('--rho', type=float, default=20)
 
     if mode == 'testing':
